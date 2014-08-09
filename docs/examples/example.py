@@ -6,18 +6,22 @@ article = alm.get_alm("10.1371/journal.pone.0029797", info="summary")
 
 ### @export "print-article"
 article
+## returns a list 
+## [<ArticleALM Ecological Guild Evolution and the Discovery of the World's Smallest Vertebrate, DOI 10.1371/journal.pone.0029797>] 
+
 
 ### @export "print-biblio"
-article.title
-article.url
+sample_article = article[0]
+sample_article.title
+sample_article.url
 
 ### @export "print-ids"
-article.doi
-article.pmid
+sample_article.doi
+sample_article.pmid
 
 ### @export "print-stats"
-article.views
-article.citations
+sample_article.views
+sample_article.citations
 
 ### @export "multiple-dois"
 articles = alm.get_alm(
